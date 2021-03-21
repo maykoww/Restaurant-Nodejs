@@ -1,3 +1,4 @@
 /node_modules
 /public/admin/bower_components
 /public/db
+.env
