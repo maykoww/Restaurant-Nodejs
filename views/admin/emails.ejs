@@ -1,0 +1,63 @@
+<%- include('./inc/header') -%>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>
+                    E-mails
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+                    <li class="active">E-mails</li>
+                </ol>
+            </section>
+
+            <!-- Main content -->
+            <section class="content container-fluid">
+
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Lista</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body no-padding">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th style="width: 10px">#</th>
+                                    <th>E-mail</th>
+                                    <th style="min-width: 75px;">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% data.forEach(row => { %>
+                                <tr data-row="<%= JSON.stringify(row) %>">
+                                    <td><%= row.id %>.</td>
+                                    <td><%= row.email %></td>
+                                    <td><button type="button" class="btn btn-xs btn-danger btn-delete"><i class="fa fa-trash"></i> Excluir</button></td>
+                                </tr>
+                                <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <!-- Main Footer -->
+        <%- include('./inc/footer') -%>
+        <script src="/js/hcode-grid.js"></script>
+
+        <script>
+            new HcodeGrid({
+                deleteUrl: '/admin/emails/${data.id}',
+                deleteMsg: 'Deseja realmente excluir o email "${data.email}"',
+                formCreate: false,
+                formUpdate: false
+            })
+        </script>

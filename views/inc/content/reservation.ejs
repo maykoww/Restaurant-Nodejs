@@ -1,0 +1,71 @@
+<%- include('./alert') -%>
+<div class="gtco-section" style="padding-bottom: 14em;">
+  <div class="gtco-container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-6 animate-box">
+
+        <h3>Reserva de mesa</h3>
+                  <form action="/reservations" method="post">
+                      <div class="row form-group">
+                          <div class="col-md-12">
+                              <label for="inputName">Nome</label>
+                              <input type="text" id="inputName" name="name" class="form-control">
+                          </div>
+                      </div>
+                      <div class="row form-group">
+                          <div class="col-md-12">
+                              <label for="inputEmail">E-mail</label>
+                              <input type="email" id="inputEmail" name="email" class="form-control">
+                          </div>
+                      </div>
+                      <div class="row form-group">
+                          <div class="col-md-12">
+                              <label for="inputPeople">Pessoas</label>
+                              <select id="inputPeople" name="people" class="form-control">
+                                  <option value=""> -- selecione -- </option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5+</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="row form-group">
+                          <div class="col-md-12">
+                              <label for="inputDate">Data</label>
+                              <input type="text" id="inputDate" name="date" class="form-control">
+                          </div>
+                      </div>
+                      <div class="row form-group">
+                          <div class="col-md-12">
+                              <label for="inputTime">Hora</label>
+                              <input type="text" id="inputTime" name="time" class="form-control">
+                          </div>
+                      </div>
+
+                      <div class="row form-group">
+                          <div class="col-md-12">
+                              <input type="submit" class="btn btn-primary btn-block" value="Reservar Agora">
+                          </div>
+                      </div>
+                  </form>
+      </div>
+      <div class="col-md-5 col-md-push-1 animate-box">
+
+        <div class="gtco-contact-info">
+          <h3>Informações de Contato</h3>
+          <ul>
+            <li class="address">2° Travessa Rio Branco, 2241<br> Volta Redonda, Caxias - MA</li>
+            <li class="phone"><a href="#">+1 234 567 890</a></li>
+            <li class="email"><a href=#>contato@email.com.br</a></li>
+          </ul>
+        </div>
+
+
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
