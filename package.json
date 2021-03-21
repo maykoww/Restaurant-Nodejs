@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node app.js",
+    "start": "bower i /public/admin && node app.js",
+    "postinstall": "bower cache clean && bower install /public/admin",
     "dev": "nodemon app.js"
   },
   "dependencies": {
+    "bower": "^1.8.12",
     "chart.js": "^2.8.0",
     "connect-nedb-session": "0.0.3",
     "cookie-parser": "~1.4.3",
