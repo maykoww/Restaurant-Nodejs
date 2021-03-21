@@ -85,6 +85,6 @@ app.use(function (err, req, res, next) {
   res.render("error");
 });
 
-http.listen(3000, function () {
+http.listen(process.env.PORT, function () {
   console.log("started");
 });
