@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "bower i /public/admin && node app.js",
-    "postinstall": "bower cache clean && bower install /public/admin",
+    "heroku-postbuild": "bower install /public/admin/",
+    "start": "node app.js",
     "dev": "nodemon app.js"
   },
   "dependencies": {
