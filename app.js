@@ -7,6 +7,7 @@ const NedbStore = require("connect-nedb-session")(session);
 const formidable = require("formidable");
 const { Server } = require("http");
 const socket = require("socket.io");
+const cors = require('cors');
 const dotenv = require("dotenv/config");
 
 const app = express();
@@ -17,6 +18,10 @@ const io = socket(http);
 io.on("connection", function (socket) {
   console.log("CONNECTED", socket.id);
 });
+
+// app.use(cors({
+//   origin: 'https://restaurantnodejs.herokuapp.com'
+// }));
 
 const indexRouter = require("./routes/index")(io);
 const adminRouter = require("./routes/admin")(io);

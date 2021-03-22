@@ -12,6 +12,7 @@
     "chart.js": "^2.8.0",
     "connect-nedb-session": "0.0.3",
     "cookie-parser": "~1.4.3",
+    "cors": "^2.8.5",
     "debug": "~2.6.9",
     "dotenv": "^8.0.0",
     "ejs": "~2.5.7",
