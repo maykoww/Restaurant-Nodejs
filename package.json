@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "heroku-postbuild": "bower install app/public/admin/",
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
