@@ -9,6 +9,7 @@ const { Server } = require("http");
 const socket = require("socket.io");
 const cors = require('cors');
 const dotenv = require("dotenv/config");
+const conn = require('./inc/db');
 
 const app = express();
 
@@ -25,6 +26,10 @@ io.on("connection", function (socket) {
 
 const indexRouter = require("./routes/index")(io);
 const adminRouter = require("./routes/admin")(io);
+
+setInterval(() => {
+  conn.query('SELECT * FROM tb_menus WHERE id = 1');
+}, 5000);
 
 app.use(function (req, res, next) {
   req.body = {};
